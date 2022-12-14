@@ -42,6 +42,10 @@ body {
   /* background: url("https://picsum.photos/1920/1080/?random=1") no-repeat center/cover; */
 }
 
+h2 {
+  margin-bottom: 2rem;
+}
+
 .container {
   /* --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0; */
@@ -526,12 +530,17 @@ body {
 .ourTeam .member {
   width: 300px;
   height: 300px;
-  border: 1px solid rgb(87, 31, 31);
+  /* border: 1px solid rgb(87, 31, 31); */
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.mem_text {
+  width: 100%;
+
 }
 
 
@@ -542,6 +551,7 @@ body {
 }
 
 .member .quote-creative {
+  width: 80%;
   text-align: center;
   padding: 0 15px 30px;
   letter-spacing: .025em;
@@ -551,16 +561,36 @@ body {
   /* filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15)); */
 }
 
+.member .quote-creative h5 {
+  margin-top: 1rem;
+}
+
+.member .quote-creative p {
+  margin-top: 5px;
+}
+
+.member .quote-creative h6 {
+  margin-top: 8px;
+  margin-bottom: 1rem;
+
+}
+
+.member .quote-creative a {
+  /* list-style: none; */
+  text-decoration: none;
+}
+
 .member .quote-creative-figure {
   display: inline-block;
   margin-top: -42px;
+  background: #ffffff;
   border: 15px solid #ffffff;
   border-radius: 50%;
 }
 
 .offer {
   width: 100%;
-  padding-top: 30px;
+  padding: 30px 0;
   background: rgb(255, 255, 255);
 
   display: flex;
@@ -572,6 +602,20 @@ body {
 
 .offer h2 {
   align-self: center;
+}
+
+
+.saveCash {
+  width: 100%;
+  padding: 100px 0;
+  background: url("https://picsum.photos/300/300/?random=123") no-repeat center/cover;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .offer .offer_box {
@@ -596,17 +640,18 @@ body {
 
 .feedback .customer {
   width: 300px;
-  height: 300px;
-  border: 1px solid rgb(87, 31, 31);
-
+  height: 344px;
+  /* border: 1px solid rgb(87, 31, 31); */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   overflow: hidden;
 }
 
 .feedback .customer .quote-creative {
+  width: 90%;
+  height: 170px;
   text-align: center;
   padding: 0 15px 30px;
   letter-spacing: .025em;
@@ -614,15 +659,16 @@ body {
   /* transform: translate3d(0, 0, 0); */
   backface-visibility: hidden;
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15));
-  /* z-index: -1; */
-  /* clear: both; */
-  /* box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15); */
+}
+
+.feedback .customer .quote-creative .quote-creative-text {
+  font-size: 12px;
 }
 
 .feedback .customer .quote-creative-figure {
   display: inline-block;
-  margin-top: -62px;
-  border: 15px solid #ffffff;
+  margin-top: -42px;
+  border: 10px solid #ffffff;
   border-radius: 50%;
   background-color: #fff;
   /* box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15); */
@@ -630,24 +676,12 @@ body {
 }
 
 .feedback .customer img {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
 
-.saveCash {
-  width: 100%;
-  margin-top: 20px;
-  padding-top: 30px;
-  background: url("https://picsum.photos/300/300/?random=123");
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
 
 
 
