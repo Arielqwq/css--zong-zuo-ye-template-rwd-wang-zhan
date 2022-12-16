@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  font-family: "微軟正黑體";
+  font-family: '微軟正黑體';
   background: rgb(100, 211, 226);
 }
 
@@ -17,7 +17,7 @@ body {
   list-style: none;
   box-sizing: border-box;
   /* 尺寸變化時的動畫 */
-  transition: .2s;
+  transition: 0.2s;
 }
 
 :root {
@@ -55,8 +55,7 @@ h2 {
   padding-left: calc(var(--bs-gutter-x) * 0.5); */
   /* margin-right: auto;
   margin-left: auto; */
-  box-shadow:
-    0px 0px 25px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 25px 4px rgba(0, 0, 0, 0.05);
   /* inset 0 65px #333; */
   display: flex;
   flex-direction: column;
@@ -66,14 +65,15 @@ h2 {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
-/* .top {
+.top {
   width: 77vw;
   height: 70px;
   background: white;
   position: fixed;
-  padding: 0px 10px 0px 10px;
-} */
+  z-index: 1000;
+
+  /* padding: 0px 10px 0px 10px; */
+}
 
 .row_top {
   width: 77vw;
@@ -84,13 +84,13 @@ h2 {
   margin: auto;
   /* padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5); */
-  background: #ced2d6;
+  background: white;
   /* padding: 0px 5px 0px 5px; */
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  z-index: 1000;
+  /* z-index: 1000; */
   /* box-shadow: ; */
 }
 
@@ -116,7 +116,6 @@ h2 {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
-
 }
 
 .row_top img {
@@ -181,7 +180,7 @@ h2 {
 }
 
 #btn::before {
-  content: "";
+  content: '';
   width: 10px;
   height: 100%;
   /* border-radius: 50%; */
@@ -236,15 +235,13 @@ h2 {
   border: 1px solid rgb(237, 233, 233);
   margin: 0 0 40px 0;
   padding: 66px 15px 50px 15px;
-  box-shadow:
-    0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
 }
 
 .feature_content a {
@@ -260,7 +257,7 @@ h2 {
 }
 
 .feature_content a::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 80%;
@@ -283,8 +280,7 @@ h2 {
   /* margin: 0 0 40px 0; */
 
   padding: 66px 15px 50px 15px;
-  box-shadow:
-    0px 0px 10px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.05);
 
   display: flex;
   flex-direction: column;
@@ -317,7 +313,7 @@ h2 {
 }
 
 .recommendHostel .recom_img::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 90%;
   height: 80%;
@@ -350,7 +346,7 @@ h2 {
   margin: 0; */
   padding: 5px 0;
   margin-bottom: 10px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   border-top: 1px solid #999;
   border-bottom: 1px solid #999;
 }
@@ -378,15 +374,15 @@ h2 {
 }
 
 /* 選擇誰要顯示 */
-#recom_tab1:checked~.recom_p1 {
+#recom_tab1:checked ~ .recom_p1 {
   display: block;
 }
 
-#recom_tab2:checked~.recom_p2 {
+#recom_tab2:checked ~ .recom_p2 {
   display: block;
 }
 
-#recom_tab3:checked~.recom_p3 {
+#recom_tab3:checked ~ .recom_p3 {
   display: block;
 }
 
@@ -414,7 +410,7 @@ h2 {
 }
 
 .recommendHostel #recom_btn1::before {
-  content: "";
+  content: '';
   width: 10px;
   height: 100%;
   /* border-radius: 50%; */
@@ -446,8 +442,6 @@ h2 {
   border: none;
 }
 
-
-
 .recommendHostel #recom_btn2 {
   text-align: center;
   padding: 10px;
@@ -467,7 +461,7 @@ h2 {
 }
 
 .recommendHostel #recom_btn2::before {
-  content: "";
+  content: '';
   width: 10px;
   height: 100%;
   /* border-radius: 50%; */
@@ -499,7 +493,6 @@ h2 {
   border: none;
 }
 
-
 .ourGallrey {
   width: 100%;
   padding-top: 30px;
@@ -516,7 +509,6 @@ h2 {
 .ourGallrey .gal_img {
   margin: 10px;
 }
-
 
 .ourTeam {
   width: 100%;
@@ -544,9 +536,7 @@ h2 {
 
 .mem_text {
   width: 100%;
-
 }
-
 
 .ourTeam .member img {
   width: 100px;
@@ -558,7 +548,7 @@ h2 {
   width: 85%;
   text-align: center;
   padding: 0 15px 30px;
-  letter-spacing: .025em;
+  letter-spacing: 0.025em;
   background: #eee;
   /* transform: translate3d(0, 0, 0); */
   backface-visibility: hidden;
@@ -577,7 +567,6 @@ h2 {
 .member .quote-creative h6 {
   margin-top: 8px;
   margin-bottom: 1rem;
-
 }
 
 .member .quote-creative a {
@@ -611,6 +600,7 @@ h2 {
 
 .offer .offer_box {
   text-align: left;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -635,7 +625,7 @@ h2 {
 .saveCash {
   width: 100%;
   padding: 100px 0;
-  background: url("https://picsum.photos/300/300/?random=123") no-repeat center/cover;
+  background: url('https://picsum.photos/300/300/?random=123') no-repeat center/cover;
   color: #fff;
 
   display: flex;
@@ -649,7 +639,7 @@ h2 {
   width: 100%;
   padding: 100px 0;
   background: #fff;
-  color: #fff;
+  color: rgb(0, 0, 0);
 
   display: flex;
   flex-direction: column;
@@ -660,6 +650,23 @@ h2 {
 
 .ourRooms .room {
   margin: 10px;
+  position: relative;
+}
+
+.ourRooms .room::before {
+  content: '$30/NIGHT';
+  white-space: pre;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  margin: 10px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgb(249, 206, 15);
+  top: -10px;
+  right: 6px;
+  border-radius: 0 0 0 15px;
 }
 
 .ourRooms .room .room_header {
@@ -701,22 +708,22 @@ h2 {
 }
 
 .feedback .customer {
-  width: 300px;
-  height: 344px;
+  width: 330px;
+  height: 270px;
   /* border: 1px solid rgb(87, 31, 31); */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .feedback .customer .quote-creative {
   width: 90%;
-  height: 170px;
+  height: 200px;
   text-align: center;
   padding: 0 15px 30px;
-  letter-spacing: .025em;
+  letter-spacing: 0.025em;
   background: #ffffff;
   /* transform: translate3d(0, 0, 0); */
   backface-visibility: hidden;
@@ -727,6 +734,10 @@ h2 {
   font-size: 12px;
 }
 
+.feedback .customer .quote-creative h5 {
+  margin: 15px;
+}
+
 .feedback .customer .quote-creative-figure {
   display: inline-block;
   margin-top: -42px;
@@ -734,7 +745,6 @@ h2 {
   border-radius: 50%;
   background-color: #fff;
   /* box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15); */
-
 }
 
 .feedback .customer img {
@@ -746,7 +756,7 @@ h2 {
 .discount {
   width: 100%;
   padding: 100px 0;
-  background: url("https://picsum.photos/300/300/?random=124") no-repeat center/cover;
+  background: url('https://picsum.photos/300/300/?random=124') no-repeat center/cover;
   color: #fff;
 
   display: flex;
@@ -763,7 +773,6 @@ h2 {
   margin: 5px;
   line-height: 2rem;
   border: 1px solid rgba(238, 238, 238, 0.719);
-
 }
 
 .discount .discount_input {
@@ -772,16 +781,13 @@ h2 {
 }
 
 .discount .discount_input::before {
-  content: "The text field is required";
+  content: 'The text field is required';
   position: absolute;
 
   font-size: 3px;
   top: 6px;
   right: 10px;
-
 }
-
-
 
 /* --------------------
  */
@@ -810,7 +816,7 @@ h2 {
   border-radius: 3px;
   background: #f90;
   position: absolute;
-  content: "";
+  content: '';
 }
 
 .toTop-arrow::before {
@@ -851,7 +857,7 @@ h2 {
   border-radius: 3px;
   background: #f90;
   position: absolute;
-  content: "";
+  content: '';
 }
 
 .toTop-arrow::before {
@@ -892,7 +898,7 @@ h2 {
   border-radius: 3px;
   background: #f90;
   position: absolute;
-  content: "";
+  content: '';
 }
 
 .toTop-arrow::before {
