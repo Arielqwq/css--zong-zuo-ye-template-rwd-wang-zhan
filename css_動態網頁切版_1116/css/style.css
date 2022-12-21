@@ -635,6 +635,46 @@ h2 {
   overflow: hidden;
 }
 
+.saveCash #btn{
+margin-top: 35px;
+background: rgb(231, 203, 45);
+color: #000;
+border: none;
+
+}
+
+.saveCash #btn::before {
+  /* content: '';
+  width: 10px;
+  height: 100%;
+  /* border-radius: 50%; */
+  /* left: 0; */
+  /* top: 0; */
+  position: absolute;
+  background: rgb(242, 223, 116);
+  transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: scaleX(0);
+  /* transform-origin: center; */
+  opacity: 0;
+  z-index: -1;
+}
+
+.saveCash #btn:hover::before {
+  width: 100%;
+  height: 100%;
+  transform: scaleX(1);
+  /* color: rgb(251, 251, 251); */
+  opacity: 0.9;
+}
+
+.saveCash #btn:hover span {
+  color: rgb(0, 0, 0);
+}
+
+.saveCash #btn:hover {
+  border: none;
+}
+
 .ourRooms {
   width: 100%;
   padding: 100px 0;
@@ -654,7 +694,7 @@ h2 {
 }
 
 .ourRooms .room::before {
-  content: '$30/NIGHT';
+  content: '$30';
   white-space: pre;
   display: flex;
   flex-direction: column;
@@ -684,16 +724,73 @@ h2 {
 .ourRooms .room .room_text h4 {
   margin: 10px 0;
 }
-
-.ourRooms .room .room_text span {
-  font-size: 3px;
+.ourRooms .room .room_text a{
+  text-decoration: none;
+  color: #000;
+}
+.ourRooms .room .room_text span:nth-child(3) a {
   color: #999;
+}
+
+.ourRooms .room .room_text a:hover,.ourRooms .room .room_text span:nth-child(3) a:hover{
+  color: rgb(255,208,0);
+}
+
+.ourRooms .room .room_text span:nth-child(3){
+  font-size: 3px;
+  margin-left: 5px;
 }
 
 .ourRooms .room .room_text p {
   margin: 5px 0;
   font-size: 10px;
+  color: #999;
 }
+
+.ourRooms #btn{
+  margin-top: 35px;
+  background: rgb(252, 252, 252);
+  border: 2px solid #000;
+  }
+
+  .ourRooms #btn span{
+  color: #000;
+  font-weight:bold;
+
+  }
+  
+  .ourRooms #btn::before {
+    /* content: '';
+    width: 10px;
+    height: 100%;
+    /* border-radius: 50%; */
+    /* left: 0; */
+    /* top: 0; */
+    position: absolute;
+    background: rgb(242, 223, 116);
+    transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: scaleX(0);
+    /* transform-origin: center; */
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .ourRooms #btn:hover::before {
+    width: 100%;
+    height: 100%;
+    transform: scaleX(1);
+    /* color: rgb(251, 251, 251); */
+    opacity: 0.9;
+  }
+  
+  .ourRooms #btn:hover span {
+    color: rgb(255, 255, 255);
+  }
+  
+  .ourRooms #btn:hover {
+    border: none;
+  }
+  
 
 .feedback {
   width: 100%;
@@ -722,7 +819,7 @@ h2 {
   width: 90%;
   height: 200px;
   text-align: center;
-  padding: 0 15px 30px;
+  padding: 0 15px 15px;
   letter-spacing: 0.025em;
   background: #ffffff;
   /* transform: translate3d(0, 0, 0); */
@@ -731,11 +828,19 @@ h2 {
 }
 
 .feedback .customer .quote-creative .quote-creative-text {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .feedback .customer .quote-creative h5 {
-  margin: 15px;
+  margin-top: 20px;
+}
+
+.feedback .customer .quote-creative h5 a{
+  text-decoration: none;
+  color: #ffc107;
+}
+.feedback .customer .quote-creative h5 a:hover {
+  filter: brightness(.9);
 }
 
 .feedback .customer .quote-creative-figure {
@@ -789,6 +894,17 @@ h2 {
   right: 10px;
 }
 
+.blogPost {
+  width: 100%;
+  padding-top: 30px;
+  background: #eee;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 /* --------------------
  */
 
