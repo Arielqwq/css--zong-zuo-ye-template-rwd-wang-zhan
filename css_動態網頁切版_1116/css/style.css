@@ -65,6 +65,7 @@ h2 {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 .top {
   width: 77vw;
   height: 70px;
@@ -374,15 +375,15 @@ h2 {
 }
 
 /* 選擇誰要顯示 */
-#recom_tab1:checked ~ .recom_p1 {
+#recom_tab1:checked~.recom_p1 {
   display: block;
 }
 
-#recom_tab2:checked ~ .recom_p2 {
+#recom_tab2:checked~.recom_p2 {
   display: block;
 }
 
-#recom_tab3:checked ~ .recom_p3 {
+#recom_tab3:checked~.recom_p3 {
   display: block;
 }
 
@@ -635,11 +636,11 @@ h2 {
   overflow: hidden;
 }
 
-.saveCash #btn{
-margin-top: 35px;
-background: rgb(231, 203, 45);
-color: #000;
-border: none;
+.saveCash #btn {
+  margin-top: 35px;
+  background: rgb(231, 203, 45);
+  color: #000;
+  border: none;
 
 }
 
@@ -724,19 +725,22 @@ border: none;
 .ourRooms .room .room_text h4 {
   margin: 10px 0;
 }
-.ourRooms .room .room_text a{
+
+.ourRooms .room .room_text a {
   text-decoration: none;
   color: #000;
 }
+
 .ourRooms .room .room_text span:nth-child(3) a {
   color: #999;
 }
 
-.ourRooms .room .room_text a:hover,.ourRooms .room .room_text span:nth-child(3) a:hover{
-  color: rgb(255,208,0);
+.ourRooms .room .room_text a:hover,
+.ourRooms .room .room_text span:nth-child(3) a:hover {
+  color: rgb(255, 208, 0);
 }
 
-.ourRooms .room .room_text span:nth-child(3){
+.ourRooms .room .room_text span:nth-child(3) {
   font-size: 3px;
   margin-left: 5px;
 }
@@ -747,50 +751,50 @@ border: none;
   color: #999;
 }
 
-.ourRooms #btn{
+.ourRooms #btn {
   margin-top: 35px;
   background: rgb(252, 252, 252);
   border: 2px solid #000;
-  }
+}
 
-  .ourRooms #btn span{
+.ourRooms #btn span {
   color: #000;
-  font-weight:bold;
+  font-weight: bold;
 
-  }
-  
-  .ourRooms #btn::before {
-    /* content: '';
+}
+
+.ourRooms #btn::before {
+  /* content: '';
     width: 10px;
     height: 100%;
     /* border-radius: 50%; */
-    /* left: 0; */
-    /* top: 0; */
-    position: absolute;
-    background: rgb(242, 223, 116);
-    transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-    transform: scaleX(0);
-    /* transform-origin: center; */
-    opacity: 0;
-    z-index: -1;
-  }
-  
-  .ourRooms #btn:hover::before {
-    width: 100%;
-    height: 100%;
-    transform: scaleX(1);
-    /* color: rgb(251, 251, 251); */
-    opacity: 0.9;
-  }
-  
-  .ourRooms #btn:hover span {
-    color: rgb(255, 255, 255);
-  }
-  
-  .ourRooms #btn:hover {
-    border: none;
-  }
-  
+  /* left: 0; */
+  /* top: 0; */
+  position: absolute;
+  background: rgb(242, 223, 116);
+  transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: scaleX(0);
+  /* transform-origin: center; */
+  opacity: 0;
+  z-index: -1;
+}
+
+.ourRooms #btn:hover::before {
+  width: 100%;
+  height: 100%;
+  transform: scaleX(1);
+  /* color: rgb(251, 251, 251); */
+  opacity: 0.9;
+}
+
+.ourRooms #btn:hover span {
+  color: rgb(255, 255, 255);
+}
+
+.ourRooms #btn:hover {
+  border: none;
+}
+
 
 .feedback {
   width: 100%;
@@ -835,10 +839,11 @@ border: none;
   margin-top: 20px;
 }
 
-.feedback .customer .quote-creative h5 a{
+.feedback .customer .quote-creative h5 a {
   text-decoration: none;
   color: #ffc107;
 }
+
 .feedback .customer .quote-creative h5 a:hover {
   filter: brightness(.9);
 }
@@ -897,6 +902,36 @@ border: none;
 .blogPost {
   width: 100%;
   padding-top: 30px;
+  background: rgb(255, 255, 255);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.blogPost .blogTitle {
+  margin-top: -50px;
+  background: white;
+  width: 225px;
+  height: 100px;
+  border: 1px solid #000;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.05);
+}
+
+.blogPost .blogTitle span {
+  /* width: 60px;
+  height: 30px; */
+  display: inline-block;
+  margin-top: 5px;
+  /* padding: 5px; */
+  /* background: #0d6efd; */
+}
+
+.gallery {
+  width: 100%;
+  padding-top: 30px;
   background: #eee;
 
   display: flex;
@@ -905,6 +940,28 @@ border: none;
   align-items: center;
   overflow: hidden;
 }
+
+.gallery p {
+  margin-top: 20px;
+  font-size: 12px;
+  background: #999;
+
+  position: relative;
+}
+
+.gallery p::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background: white;
+  /* z-index: -1; */
+}
+
+.gallery img {
+  margin: 10px;
+}
+
 /* --------------------
  */
 
