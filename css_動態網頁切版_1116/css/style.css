@@ -369,15 +369,15 @@ h2 {
 }
 
 /* 選擇誰要顯示 */
-#recom_tab1:checked ~ .recom_p1 {
+#recom_tab1:checked~.recom_p1 {
   display: block;
 }
 
-#recom_tab2:checked ~ .recom_p2 {
+#recom_tab2:checked~.recom_p2 {
   display: block;
 }
 
-#recom_tab3:checked ~ .recom_p3 {
+#recom_tab3:checked~.recom_p3 {
   display: block;
 }
 
@@ -854,13 +854,66 @@ h2 {
   border-radius: 50%;
 }
 
+
+.followingTheDream {
+  width: 100%;
+  /* height: 660px; */
+  background: rgb(255, 255, 255);
+  /* height: 660px; */
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
+}
+
+.followingTheDream h2 {
+  margin-top: 10px;
+}
+
+.followingTheDream .dream_card {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #eee;
+  margin: 20px;
+  padding: 30px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.followingTheDream .dream_card::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background: #ffc107;
+  top: 103px;
+}
+
+.followingTheDream .dream_card span {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.followingTheDream .dream_card p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 .discount {
-  background: url('https://picsum.photos/300/200/?random=10') no-repeat center/cover;
+  background: url("https://picsum.photos/1920/1080/?random=1") no-repeat center/cover;
 
   color: #fff;
   width: 100%;
   padding-top: 30px;
-  background: #eee;
+  /* background: #eee; */
 
   display: flex;
   flex-direction: column;
@@ -875,12 +928,13 @@ h2 {
   background: rgba(238, 238, 238, 0.719);
 
   margin: 5px;
-  line-height: 2rem;
+  line-height: 2.5rem;
   border: 1px solid rgba(238, 238, 238, 0.719);
 }
 
 .discount .discount_input {
   /* width: 80%; */
+  margin-top: 20px;
   position: relative;
 }
 
@@ -893,10 +947,26 @@ h2 {
   right: 10px;
 }
 
+.discount #btn {
+  text-align: center;
+  padding: -12px;
+  margin-bottom: 50px;
+  width: 442px;
+  height: 50px;
+  border: 1px solid #999;
+  position: relative;
+  overflow: hidden;
+  /* background: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
 .blogPost {
   width: 100%;
-  padding-top: 30px;
-  background: rgb(255, 255, 255);
+  padding-top: 20px;
+  background: rgba(255, 255, 255);
 
   display: flex;
   flex-direction: column;
@@ -925,7 +995,7 @@ h2 {
 
 .gallery {
   width: 100%;
-  padding-top: 30px;
+  padding: 30px 0;
   background: #eee;
 
   display: flex;
@@ -955,6 +1025,50 @@ h2 {
 .gallery img {
   margin: 10px;
 }
+
+.footer {
+  width: 100%;
+  padding-top: 30px;
+  background: rgb(46, 45, 45);
+  color: #999;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer a {
+  list-style: none;
+  text-decoration: none;
+  color: #999;
+
+}
+
+.footer ul {
+  list-style-type: disc;
+}
+
+.footer .footer_contact {
+  width: 100%;
+  /* background: #252728; */
+  color: #6c757d;
+  padding: 30px;
+}
+
+.footer .social_media {
+  width: 100%;
+  background: #252728;
+  color: #6c757d;
+  padding: 30px;
+}
+
+
+
+
+
+
 
 /* --------------------
  */
@@ -1080,28 +1194,4 @@ h2 {
 
 .toTop-arrow:focus {
   outline: none;
-}
-.followingTheDream {
-  width: 100%;
-  /* height: 660px; */
-  background: rgb(255, 255, 255);
-  /* height: 660px; */
-  padding: 60px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* margin: auto; */
-}
-
-.followingTheDream h2 {
-  margin-top: 10px;
-}
-
-.followingTheDream .dream_card {
-  width: 200px;
-  height: 200px;
-  border: 5px solid #eee;
-  margin: 20px;
-  padding: auto;
 }

@@ -291,15 +291,15 @@
         <h2>MORE THAN 10 YEARS OF FOLLOWING THE DREAM</h2>
         <div class="dream_card">
           <span>12</span>
-          <h4>AWARDS</h4>
+          <p>AWARDS</p>
         </div>
         <div class="dream_card">
-          <span>12</span>
-          <h4>AWARDS</h4>
+          <span>650</span>
+          <p>GUESTS</p>
         </div>
         <div class="dream_card">
-          <span>12</span>
-          <h4>AWARDS</h4>
+          <span>1K</span>
+          <p>CUPS OF COFFEE</p>
         </div>
       </div>
       <!-- DISCOUNT -->
@@ -307,8 +307,8 @@
         <h2>SIGN UP FOR 25% DISCOUNT</h2>
         <p>Want to get an instant discount for your stay at our hostel? Leave your email and sign up for our newsletter
           with 25% off all our rooms.</p>
-        <div class="discount_input"><input type="text" size="44" placeholder="Enter your Email"></div>
-        <div id="btn" style="width: 93%;">
+        <div class="discount_input"><input type="text" size="62" placeholder="Enter your Email"></div>
+        <div id="btn">
           <span>subscribe</span>
         </div>
       </div>
@@ -335,13 +335,57 @@
         <p>GALLERY</p>
         <img src="https://picsum.photos/300/200/?random=10">
       </div>
+      <!-- footer -->
+      <div class="footer">
+        <div class="footer_contact">
+          <h2>CONTACT US </h2>
+          <span><i class="fa-solid fa-phone"></i><a href="#">+1 323-913-4688</a> </span>
+          <span><i class="fa-solid fa-envelope"></i> <a href="#">info@demolink.org</a></span>
+          <span><i class="fa-solid fa-paper-plane"></i><a href="#">
+              4730 Crystal Springs Dr, Los Angeles, CA 90027</a></span>
+          <h2>POPULAR NEWS</h2>
+          <span><a href="#">Hostel or Hotel: What to Choose and Why</a></span>
+          <p>MAY 04, 2022</p>
+          <span><a href="#">Our Guide for Travelers on a Budget</a></span>
+          <p>MAY 04, 2022</p>
+          <h2>QUICK LINKS</h2>
+          <ul>
+            <li><a href="#"></a>About Us</a> </li>
+            <li><a href="#">Our Rooms </a></li>
+            <li><a href="#">Our Team </a></li>
+            <li><a href="#">Blog </a></li>
+            <li><a href="#">Gallery </a></li>
+          </ul>
+          <div class="footer_btn">
+            <div id="btn">
+              <span>MORE INFO</span>
+            </div>
+            <div id="btn">
+              <span>MORE INFO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social_media">
+          <span>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google-plus-g"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </span>
+          <p>© 2022 Visit Hostel. All rights reserved</p>
+          <p><a href="#">Privacy Policy</a></p>
+        </div>
+
+
+
+      </div>
+      <!-- content -->
+
     </div>
 
+    <!-- CONTAINER -->
 
-
-    <!-- content -->
-  </div>
-  <!-- CONTAINER -->
   </div>
 
 
@@ -354,7 +398,7 @@
       $('#BackTop').click(function () {
         $('html,body').animate({ scrollTop: 0 }, 333);
       });
-      $('.container').scroll(function () {
+      $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
           $('#BackTop').fadeIn(222);
         } else {
