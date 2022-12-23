@@ -47,8 +47,8 @@ h2 {
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 
   box-shadow: 0px 0px 25px 4px rgba(0, 0, 0, 0.05);
   /* inset 0 65px #333; */
@@ -125,22 +125,53 @@ h2 {
 
 .content {
   width: 100%;
-  height: 660px;
+  height: 600px;
   /* 固定高度 */
-  margin-top: 70px;
+  /* margin-top: 70px; */
   background-color: #ffc107;
   text-align: center;
 }
 
 .slider_content {
-  width: 100%;
-  height: 660px;
+  /* width: 100%; */
+  /* height: 100%; */
   /* 固定高度 */
   margin-top: 70px;
   background-color: #ffc107;
   text-align: center;
   /* line-height: 80px; */
 }
+/*  */
+#ww.swiper {
+  /* 可修改輪播圖的寬、高，或是隨著外容器的寬高，但設定寬度的話就會影響到斷點屬性 */
+  /* width: 1000px; */
+  height: 100%;
+}
+
+#ww .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#ww .swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.2rem;
+  color: white;
+  opacity: 1;
+  transition: 1s;
+}
+
+#ww .swiper-pagination-bullet-active {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #dda;
+}
+/*  */
 
 .slider_content .bigImg {
   width: 100%;
@@ -369,15 +400,15 @@ h2 {
 }
 
 /* 選擇誰要顯示 */
-#recom_tab1:checked~.recom_p1 {
+#recom_tab1:checked ~ .recom_p1 {
   display: block;
 }
 
-#recom_tab2:checked~.recom_p2 {
+#recom_tab2:checked ~ .recom_p2 {
   display: block;
 }
 
-#recom_tab3:checked~.recom_p3 {
+#recom_tab3:checked ~ .recom_p3 {
   display: block;
 }
 
@@ -671,7 +702,7 @@ h2 {
 
 .ourRooms {
   width: 100%;
-  padding: 100px 0;
+  padding: 50px 0;
   background: #fff;
   color: rgb(0, 0, 0);
 
@@ -684,22 +715,38 @@ h2 {
 
 .ourRooms .room {
   margin: 10px;
+  padding-bottom: 20px;
   position: relative;
 }
 
 .ourRooms .room::before {
   content: '$30';
-  white-space: pre;
   display: flex;
   flex-direction: column;
-  font-size: 10px;
+  font-size: 20px;
   margin: 10px;
   position: absolute;
   width: 50px;
   height: 50px;
   background: rgb(249, 206, 15);
   top: -10px;
-  right: 6px;
+  right: 12px;
+  border-radius: 0 0 0 15px;
+}
+
+.ourRooms .room::after {
+  content: '/NIGHT';
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  margin: 10px;
+  position: absolute;
+  color: rgb(156, 154, 154);
+  /* width: 50px;
+  height: 50px; */
+  /* background: rgb(249, 206, 15); */
+  top: 20px;
+  right: 13px;
   border-radius: 0 0 0 15px;
 }
 
@@ -854,7 +901,6 @@ h2 {
   border-radius: 50%;
 }
 
-
 .followingTheDream {
   width: 100%;
   /* height: 660px; */
@@ -886,9 +932,8 @@ h2 {
   align-items: center;
 }
 
-
 .followingTheDream .dream_card::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 60px;
   height: 2px;
@@ -908,7 +953,7 @@ h2 {
 }
 
 .discount {
-  background: url("https://picsum.photos/1920/1080/?random=1") no-repeat center/cover;
+  background: url('https://picsum.photos/1920/1080/?random=1') no-repeat center/cover;
 
   color: #fff;
   width: 100%;
@@ -965,7 +1010,7 @@ h2 {
 
 .blogPost {
   width: 100%;
-  padding-top: 20px;
+  padding: 50px 0 30px 0;
   background: rgba(255, 255, 255);
 
   display: flex;
@@ -978,10 +1023,10 @@ h2 {
 .blogPost .blogTitle {
   margin-top: -50px;
   background: white;
-  width: 225px;
+  width: 300px;
   height: 100px;
-  border: 1px solid #000;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 10%);
 }
 
 .blogPost .blogTitle span {
@@ -1008,18 +1053,18 @@ h2 {
 .gallery p {
   margin-top: 20px;
   font-size: 12px;
-  background: #999;
+  /* background: #999; */
 
   position: relative;
 }
 
-.gallery p::before {
+.gallery::before {
   content: '';
   position: absolute;
   width: 50px;
   height: 30px;
   background: white;
-  /* z-index: -1; */
+  z-index: 1;
 }
 
 .gallery img {
@@ -1043,7 +1088,6 @@ h2 {
   list-style: none;
   text-decoration: none;
   color: #999;
-
 }
 
 .footer ul {
@@ -1056,19 +1100,19 @@ h2 {
   color: #6c757d;
   padding: 30px;
 }
+.footer .footer_btn {
+  display: flex;
+}
 
+.footer .footer_btn #btn {
+  margin: 5px;
+}
 .footer .social_media {
   width: 100%;
   background: #252728;
   color: #6c757d;
   padding: 30px;
 }
-
-
-
-
-
-
 
 /* --------------------
  */

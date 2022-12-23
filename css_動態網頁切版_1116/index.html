@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./css/all.css">
   <!-- 自己的外部樣式 -->
   <link rel="stylesheet" href="./css/style.css">
+  <!-- 1. 設定 swiper 的 css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <title>Template RWD 網站</title>
 </head>
 
@@ -37,13 +39,40 @@
     <div class="content">
       <!-- 內容1_大圖輪播 -->
       <div class="slider_content">
-        <div class="bigImg">
+        <!-- 3. 設定 swiper 的結構 Slider main container -->
+        <div id="ww" class="swiper">
+          <!-- 輪播圖主體 -->
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides 播放的圖片 -->
+            <div class="swiper-slide">
+              <img src="https://picsum.photos/1920/1080/?random=1">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://picsum.photos/1920/1080/?random=2">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://picsum.photos/1920/1080/?random=3">
+            </div>
+          </div>
+          <!-- 分頁 -->
+          <div class="swiper-pagination"></div>
+
+          <!-- 上、下張 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- 進度條 -->
+          <!-- 預設 false 會顯示，改成 true 只在滑動時顯示，如果不需要直接隱藏 -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <!-- <div class="bigImg">
           <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, excepturi.</h5>
           <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sed! Lorem ipsum dolor sit amet.</h4>
           <div id="btn">
             <span> more info</span>
           </div>
-        </div>
+        </div> -->
       </div>
       <!-- 內容2_主要特色_三格方塊 -->
       <div class="feature_content">
@@ -87,7 +116,8 @@
           <input id="recom_tab3" type="radio" name="recom">
           <p class="recom_p1">ur hostel was founded in 2008 to provide travelers on a budget from all over the world
             with affordable yet highly comfortable accommodation that they could enjoy.</p>
-          <p class="recom_p2">We are one of the most popular hostels for the guests of our city. Our hostel was awarded
+          <p class="recom_p2">We are one of the most popular hostels for the guests of our city. Our hostel was
+            awarded
             the
             “Best US
             Hostel” in 2022 for the unique approach to our clients and visitors.</p>
@@ -261,7 +291,8 @@
           <article class="quote-creative">
             <a class="quote-creative-figure" href="#"><img src="https://picsum.photos/300/200/?random=10"></a>
             <div class="quote-creative-text">
-              I had a fantastic experience at this hostel; I was very impressed with the receptionists and housekeeping
+              I had a fantastic experience at this hostel; I was very impressed with the receptionists and
+              housekeeping
               staff. Laureen was especially helpful during checking out after a busy week. </div>
             <h5 class="quote-creative-cite"><a href="#">JANR WOOD</a></h5>
           </article>
@@ -305,7 +336,8 @@
       <!-- DISCOUNT -->
       <div class="discount">
         <h2>SIGN UP FOR 25% DISCOUNT</h2>
-        <p>Want to get an instant discount for your stay at our hostel? Leave your email and sign up for our newsletter
+        <p>Want to get an instant discount for your stay at our hostel? Leave your email and sign up for our
+          newsletter
           with 25% off all our rooms.</p>
         <div class="discount_input"><input type="text" size="62" placeholder="Enter your Email"></div>
         <div id="btn">
@@ -317,7 +349,7 @@
       <div class="blogPost">
         <h2>LATEST BLOG POSTS </h2>
         <div class="room_header">
-          <img src="https://picsum.photos/300/200/?random=1" style="width:100%; height: 15">
+          <img src="https://picsum.photos/400/270/?random=1" style="width:100%; height: 15">
         </div>
         <div class="blogTitle">
           <h5>HOW TO SAVE A LOT WHEN TRAVELING WORLDWIDE</h5>
@@ -381,19 +413,12 @@
 
       </div>
       <!-- content -->
-
     </div>
-
     <!-- CONTAINER -->
-
   </div>
-
-
   <button type="button" id="BackTop" class="toTop-arrow">123</button>
-
   <script src="./JQ/jquery-2.1.4.min.js"></script>
   <script>
-
     $(function () {
       $('#BackTop').click(function () {
         $('html,body').animate({ scrollTop: 0 }, 333);
@@ -407,6 +432,81 @@
       }).scroll();
     });
   </script>
+
+  <!-- 2. 設定 swiper 的 js (套件內容要記得寫在主程式下面!!)-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+
+    const ww = new Swiper('.swiper', {
+      mousewheel: true,
+      // Optional parameters
+      direction: 'horizontal',// vertical 輪播圖呈現水平或垂直，'vertical'或是'horizontal'
+      loop: true, // true 可以循環播放
+      slidesPerView: 1, // 每次顯示幾張圖片
+      spaceBetween: 10, //圖片與圖片之間的間隔距離
+      speed: 1000, //動畫轉場持續時間
+      autoplay: {
+        delay: 3000, // 自動播放，設定幾秒播放下一張
+      },
+      // 使用斷點控制輪播圖各種屬性參數，例如哪個尺寸顯示幾張圖片，
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+        1200: {
+          slidesPerView: 5,
+        },
+      },
+
+      // effect: "cube",
+
+      // 分頁指示器 
+      pagination: {
+        el: '.swiper-pagination',
+        // dynamicBullets: true, // 動態指示器
+        // type: 'progressbar', // 分頁指示器類型，progressbar(圖片進度條)、fraction(1/8)
+        clickable: true, // 可以點擊換圖
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+      },
+      // Navigation arrows (啟用上、下張功能)
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar (進度條)
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true, //true 只在滑動時顯示，預設 false 會顯示，改成 true 只在滑動時顯示，如果不需要直接註解 html 結構
+      },
+    });
+
+    // 不需要用到 this 所以可以用 箭頭函式
+    document.addEventListener('keydown', (e) => {
+      console.log(this)
+      if (e.key === 'ArrowLeft') ww.slidePrev()
+      if (e.key === 'ArrowRight') ww.slideNext();
+    })
+
+
+    // document.addEventListener('keydown', function (e) {
+    //   if (e.key === 'ArrowLeft') {
+    //     ww.slidePrev();
+    //   } else if (e.key === 'ArrowRight') {
+    //     ww.slideNext();
+    //   }
+    // })
+  </script>
+
 </body>
 
 </html>
