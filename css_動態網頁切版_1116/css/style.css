@@ -66,8 +66,6 @@ h2 {
   background: white;
   position: fixed;
   z-index: 1000;
-
-  /* padding: 0px 10px 0px 10px; */
 }
 
 .row_top {
@@ -88,17 +86,6 @@ h2 {
   /* z-index: 1000; */
   /* box-shadow: ; */
 }
-
-/* .row_top {
-  width: 100%;
-  height: 70px;
-  margin: auto;
-
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-} */
 
 .row_top button {
   border: none;
@@ -257,7 +244,6 @@ h2 {
   padding: 0 15px;
 }
 
-
 .feature_content .f_contbox .f_contbox_img img {
   width: 70px;
   height: 70px;
@@ -303,7 +289,6 @@ h2 {
   text-align: center;
   background-color: #999;
   z-index: 1;
-
 }
 
 .feature_content p {
@@ -326,6 +311,45 @@ h2 {
   align-items: center;
 }
 
+@media screen and (min-width: 758px) {
+  .feature_content .f_contbox {
+    width: 95%;
+    padding: 0 15px;
+    /* margin: 0 43px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .feature_content .f_contbox .box1,
+  .feature_content .f_contbox .box2 {
+    width: 45%;
+    /* height: 300px;
+    border: 1px solid rgb(237, 233, 233); */
+    margin: 15px;
+    /* padding: 66px 15px 50px 15px;
+    box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 5%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+  }
+
+  .feature_content .f_contbox .box3 {
+    width: 45%;
+    height: 300px;
+    /* border: 1px solid rgb(237, 233, 233); */
+    margin: 15px;
+    padding: 66px 15px 50px 15px;
+    /* box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 5%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+  }
+}
+
 .recommendHostel {
   width: 100%;
   /* height: 660px; */
@@ -340,13 +364,12 @@ h2 {
 }
 
 .recommendHostel .recom_img {
-  width: 90%;
+  width: 95%;
   height: 50%;
   padding-bottom: 40px;
-  left: 10px;
+  left: 12px;
   position: relative;
   z-index: 1;
-  /* overflow: hidden; */
 }
 
 .recommendHostel .recom_img::before {
@@ -366,11 +389,19 @@ h2 {
 }
 
 .recommendHostel h4 {
-  padding-bottom: 20px;
+  padding-bottom: 12px;
 }
 
 .recommendHostel .mytab {
-  width: 60%;
+  width: 98%;
+  padding: 0 115px;
+  /* margin: 0 39px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
 }
 
 .recommendHostel .recom_cotent {
@@ -396,6 +427,62 @@ h2 {
 
 .recommendHostel .mytab label:hover {
   color: orange;
+}
+
+@media screen and (min-width: 758px) {
+  .recommendHostel {
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+
+  .recommendHostel .recom_img {
+    width: 80%;
+    left: 80px;
+  }
+
+  .recommendHostel .mytab {
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+    align-content: stretch;
+  }
+
+  .recommendHostel .mytab {
+    width: 100%;
+    padding: 0;
+    border-bottom: 4px solid #999;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+    align-content: stretch;
+  }
+
+  .recommendHostel .mytab label {
+    display: inline-block;
+    padding: 6px 0;
+    margin-bottom: 0px;
+    font-size: 0.7rem;
+    border: none;
+  }
+
+  .recommendHostel .mytab label:hover {
+    border-bottom: 1px solid #ffc107;
+
+  }
+
+  .recommendHostel .recom_cotent {
+    padding: 20px 0;
+    text-align: left;
+  }
 }
 
 /* 隱藏選單 */
@@ -634,6 +721,15 @@ h2 {
   border-radius: 50%;
 }
 
+@media screen and (min-width: 758px) {
+  .ourTeam .member_group {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 .offer {
   width: 100%;
   padding: 20px 10px;
@@ -694,6 +790,22 @@ h2 {
   width: 70%;
   margin: 10px;
   font-size: 5px;
+}
+
+@media screen and (min-width: 758px) {
+  .offer .offer_box_group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    /* margin: auto; */
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .offer .offer_box {
+    width: 45%;
+  }
 }
 
 .saveCash {
@@ -898,6 +1010,41 @@ h2 {
   border: none;
 }
 
+@media screen and (min-width: 758px) {
+  .ourRooms .room {
+    width: 90%;
+    height: 330px;
+    /* padding: 0; */
+    margin: 30px 0;
+    border: 1px solid #eee;
+    display: flex;
+  }
+
+  .ourRooms .room::before {
+    right: -10px;
+  }
+
+  .ourRooms .room::after {
+    right: -7px;
+  }
+
+  .ourRooms .room .room_header {
+    width: 40%;
+    height: 100%;
+  }
+
+  .ourRooms .room .room_header img {
+    object-fit: cover;
+
+  }
+
+  .ourRooms .room .room_text {
+    width: 60%;
+    padding-left: 15px;
+  }
+
+}
+
 .feedback {
   width: 100%;
   padding-top: 30px;
@@ -908,6 +1055,10 @@ h2 {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.feedback .customer_group {
+  width: 100%;
 }
 
 .feedback .customer {
@@ -965,6 +1116,19 @@ h2 {
   border-radius: 50%;
 }
 
+@media screen and (min-width: 758px) {
+  .feedback .customer_group {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .feedback .customer_group .customer {
+    width: 45%;
+  }
+}
+
 .followingTheDream {
   width: 100%;
   /* height: 660px; */
@@ -1014,6 +1178,14 @@ h2 {
 .followingTheDream .dream_card p {
   margin-top: 15px;
   font-size: 14px;
+}
+
+@media screen and (min-width: 758px) {
+
+  .followingTheDream .dream_card_group {
+    width: 100%;
+    display: flex;
+  }
 }
 
 .discount {
@@ -1070,6 +1242,38 @@ h2 {
   justify-content: center;
   align-items: center;
   z-index: 1;
+}
+
+@media screen and (min-width: 758px) {
+  .discount .discount_input_n_btn {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  .discount .discount_input_n_btn .discount_input {
+    margin: 0;
+    width: 330px;
+    /* padding: 10px; */
+  }
+
+  .discount .discount_input_n_btn .discount_input input {
+    margin: 0;
+    width: 100%;
+
+    padding: 0px 7px;
+
+  }
+
+  .discount .discount_input_n_btn #btn {
+    margin: 0;
+    width: 90px;
+    height: 54px;
+    margin-left: 7px;
+    font-size: 14px;
+  }
 }
 
 .blogPost {
