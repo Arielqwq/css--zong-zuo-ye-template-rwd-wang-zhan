@@ -381,7 +381,7 @@
       <div class="gallery">
         <p>GALLERY</p>
         <!-- 3. 設定 swiper 的結構 Slider main container -->
-        <div id="ww_gallery" class="ww_gallery_swiper">
+        <div id="ww_gallery" class="swiper">
           <!-- 輪播圖主體 -->
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
@@ -409,7 +409,7 @@
             </div>
           </div>
           <!-- 分頁 -->
-          <div class="swiper-pagination-gallery"></div>
+          <div class="swiper-pagination"></div>
 
           <!-- 上、下張 -->
           <div class="swiper-button-prev"></div>
@@ -417,7 +417,7 @@
 
           <!-- 進度條 -->
           <!-- 預設 false 會顯示，改成 true 只在滑動時顯示，如果不需要直接隱藏 -->
-          <!-- <div class="swiper-scrollbar"></div> -->
+          <div class="swiper-scrollbar"></div>
         </div>
         <!-- <img src="https://picsum.photos/300/200/?random=10"> -->
       </div>
@@ -487,6 +487,9 @@
   </div>
   <button type="button" id="BackTop" class="toTop-arrow">123</button>
   <script src="./JQ/jquery-2.1.4.min.js"></script>
+
+  <!-- 2. 設定 swiper 的 js (套件內容要記得寫在主程式下面!!)-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
     $(function () {
       $('#BackTop').click(function () {
@@ -500,13 +503,8 @@
         }
       }).scroll();
     });
-  </script>
 
-  <!-- 2. 設定 swiper 的 js (套件內容要記得寫在主程式下面!!)-->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-
-    const ww = new Swiper('.swiper', {
+    const ww = new Swiper('#ww', {
       mousewheel: true,
       // Optional parameters
       direction: 'horizontal',// vertical 輪播圖呈現水平或垂直，'vertical'或是'horizontal'
@@ -566,19 +564,7 @@
       if (e.key === 'ArrowRight') ww.slideNext();
     })
 
-
-    // document.addEventListener('keydown', function (e) {
-    //   if (e.key === 'ArrowLeft') {
-    //     ww.slidePrev();
-    //   } else if (e.key === 'ArrowRight') {
-    //     ww.slideNext();
-    //   }
-    // })
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-    const ww_gallery = new Swiper('.ww_gallery_swiper', {
+    const ww_gallery = new Swiper('#ww_gallery', {
       mousewheel: true,
       // Optional parameters
       direction: 'horizontal',// vertical 輪播圖呈現水平或垂直，'vertical'或是'horizontal'
@@ -590,44 +576,14 @@
         delay: 3000, // 自動播放，設定幾秒播放下一張
       },
       // 使用斷點控制輪播圖各種屬性參數，例如哪個尺寸顯示幾張圖片，
-      breakpoints: {
-        576: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        992: {
-          slidesPerView: 4,
-        },
-        1200: {
-          slidesPerView: 5,
-        },
-      },
-
-      // effect: "cube",
-
       // 分頁指示器 
       pagination: {
-        el: '.swiper-pagination-gallery',
-        // dynamicBullets: true, // 動態指示器
-        // type: 'progressbar', // 分頁指示器類型，progressbar(圖片進度條)、fraction(1/8)
-        clickable: true, // 可以點擊換圖
-        // renderBullet: function (index, className) {
-        //   return '<span class="' + className + '">' + (index + 1) + '</span>';
-        // }
+        el: '.swiper-pagination',
       },
       // Navigation arrows (啟用上、下張功能)
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar (進度條)
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: true, //true 只在滑動時顯示，預設 false 會顯示，改成 true 只在滑動時顯示，如果不需要直接註解 html 結構
       },
     });
 
@@ -638,15 +594,8 @@
       if (e.key === 'ArrowRight') ww.slideNext();
     })
 
-
-    // document.addEventListener('keydown', function (e) {
-    //   if (e.key === 'ArrowLeft') {
-    //     ww.slidePrev();
-    //   } else if (e.key === 'ArrowRight') {
-    //     ww.slideNext();
-    //   }
-    // })
   </script>
+
 </body>
 
 </html>

@@ -244,6 +244,10 @@ h2 {
   padding: 0 15px;
 }
 
+.feature_content .f_contbox .f_contbox_img {
+  width: 100%;
+}
+
 .feature_content .f_contbox .f_contbox_img img {
   width: 70px;
   height: 70px;
@@ -401,7 +405,6 @@ h2 {
   align-items: center;
   flex-direction: row;
   justify-content: center;
-
 }
 
 .recommendHostel .recom_cotent {
@@ -436,7 +439,6 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
   }
 
   .recommendHostel .recom_img {
@@ -476,7 +478,6 @@ h2 {
 
   .recommendHostel .mytab label:hover {
     border-bottom: 1px solid #ffc107;
-
   }
 
   .recommendHostel .recom_cotent {
@@ -498,15 +499,15 @@ h2 {
 }
 
 /* 選擇誰要顯示 */
-#recom_tab1:checked~.recom_p1 {
+#recom_tab1:checked ~ .recom_p1 {
   display: block;
 }
 
-#recom_tab2:checked~.recom_p2 {
+#recom_tab2:checked ~ .recom_p2 {
   display: block;
 }
 
-#recom_tab3:checked~.recom_p3 {
+#recom_tab3:checked ~ .recom_p3 {
   display: block;
 }
 
@@ -635,7 +636,6 @@ h2 {
   align-items: center;
 }
 
-
 .ourGallrey .gal_img {
   margin: 10px;
 }
@@ -698,7 +698,6 @@ h2 {
   margin: 10px;
   font-size: 14px;
   color: #ffc107;
-
 }
 
 .member .quote-creative h6 {
@@ -710,7 +709,6 @@ h2 {
   /* list-style: none; */
   text-decoration: none;
   color: #000;
-
 }
 
 .member .quote-creative-figure {
@@ -771,7 +769,6 @@ h2 {
 .offer .offer_box h6 {
   margin: 0px 10px;
 }
-
 
 .offer .offer_box h6 a {
   text-decoration: none;
@@ -1035,14 +1032,12 @@ h2 {
 
   .ourRooms .room .room_header img {
     object-fit: cover;
-
   }
 
   .ourRooms .room .room_text {
     width: 60%;
     padding-left: 15px;
   }
-
 }
 
 .feedback {
@@ -1181,7 +1176,6 @@ h2 {
 }
 
 @media screen and (min-width: 758px) {
-
   .followingTheDream .dream_card_group {
     width: 100%;
     display: flex;
@@ -1264,7 +1258,6 @@ h2 {
     width: 100%;
 
     padding: 0px 7px;
-
   }
 
   .discount .discount_input_n_btn #btn {
@@ -1311,13 +1304,6 @@ h2 {
   padding: 30px 0;
   background: #eee;
   position: relative;
-
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
 .gallery p {
@@ -1328,19 +1314,13 @@ h2 {
   position: relative;
 }
 
-.gallery #ww_gallery .ww_gallery_swiper {
-  /* 可修改輪播圖的寬、高，或是隨著外容器的寬高，但設定寬度的話就會影響到斷點屬性 */
-  /* width: 1000px; */
-  height: 100%;
-}
-
-.gallery #ww_gallery .ww_gallery_swiper .swiper-slide img {
+.gallery #ww_gallery .swiper-slide img {
   display: block;
   width: 70%;
   height: 300px;
   object-fit: cover;
 }
-
+/* 
 .gallery #ww_gallery .ww_gallery_swiper .swiper-pagination-gallery-bullet {
   width: 30px;
   height: 30px;
@@ -1349,7 +1329,7 @@ h2 {
   color: white;
   opacity: 1;
   transition: 1s;
-}
+} */
 
 .gallery #ww_gallery .ww_gallery_swiper .swiper-pagination-gallery-bullet-active {
   width: 40px;
@@ -1358,14 +1338,14 @@ h2 {
   background: #dda;
 }
 
-.gallery::before {
+/* .gallery::before {
   content: '';
   position: absolute;
   width: 50px;
   height: 30px;
   background: white;
   z-index: 1;
-}
+} */
 
 /* 
 .gallery img {
@@ -1385,13 +1365,10 @@ h2 {
 }
 
 .footer a {
-
   list-style: none;
   text-decoration: none;
   color: #fff;
 }
-
-
 
 .footer .footer_contact {
   width: 100%;
@@ -1401,7 +1378,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .footer .footer_contact h3 {
@@ -1415,7 +1391,6 @@ h2 {
   justify-content: center;
   align-items: flex-start;
   padding: 10px 45px;
-
 }
 
 .footer .footer_contact .info_icon {
@@ -1467,7 +1442,7 @@ h2 {
 }
 
 .footer .footer_contact .link li::before {
-  content: "";
+  content: '';
   position: absolute;
   height: 8px;
   width: 8px;
@@ -1535,7 +1510,6 @@ h2 {
   background: #000;
   color: #fff;
 }
-
 
 .footer .social_media {
   width: 100%;
