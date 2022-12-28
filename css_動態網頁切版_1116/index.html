@@ -58,13 +58,6 @@
           <!-- 分頁 -->
           <div class="swiper-pagination"></div>
         </div>
-        <!-- <div class="bigImg">
-          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, excepturi.</h5>
-          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sed! Lorem ipsum dolor sit amet.</h4>
-          <div id="btn">
-            <span> more info</span>
-          </div>
-        </div> -->
       </div>
       <!-- 內容2_主要特色_三格方塊 -->
       <div class="feature_content">
@@ -102,49 +95,52 @@
         <div class="recom_img">
           <img src="https://picsum.photos/800/550/?random=1">
         </div>
-        <h4>BEST CITY HOSTEL</h4>
-        <div class="mytab">
-          <label for="recom_tab1">ABOUT US</label>
-          <label for="recom_tab2">WHY CHOOSE US</label>
-          <label for="recom_tab3">OUR MISSION</label>
-        </div>
-        <div class="recom_cotent">
-          <input id="recom_tab1" type="radio" name="recom" checked>
-          <input id="recom_tab2" type="radio" name="recom">
-          <input id="recom_tab3" type="radio" name="recom">
-          <p class="recom_p1">ur hostel was founded in 2008 to provide travelers on a budget from all over the world
-            with affordable yet highly comfortable accommodation that they could enjoy.</p>
-          <p class="recom_p2">We are one of the most popular hostels for the guests of our city. Our hostel was
-            awarded
-            the
-            “Best US
-            Hostel” in 2022 for the unique approach to our clients and visitors.</p>
-          <p class="recom_p3">Our mission is to promote a dynamic community of global citizens who have the wisdom and
-            humanity to actively
-            make the world a better place for everyone.</p>
-        </div>
-
-        <div class="recom_btns">
-          <div id="recom_btn1">
-            <a href="#"><span>GET IN TOUCH</span></a>
+        <div class="recom_text">
+          <h4>BEST CITY HOSTEL</h4>
+          <div class="mytab">
+            <label for="recom_tab1">ABOUT US</label>
+            <label for="recom_tab2">WHY CHOOSE US</label>
+            <label for="recom_tab3">OUR MISSION</label>
+          </div>
+          <div class="recom_cotent">
+            <input id="recom_tab1" type="radio" name="recom" checked>
+            <input id="recom_tab2" type="radio" name="recom">
+            <input id="recom_tab3" type="radio" name="recom">
+            <p class="recom_p1">ur hostel was founded in 2008 to provide travelers on a budget from all over the world
+              with affordable yet highly comfortable accommodation that they could enjoy.</p>
+            <p class="recom_p2">We are one of the most popular hostels for the guests of our city. Our hostel was
+              awarded
+              the
+              “Best US
+              Hostel” in 2022 for the unique approach to our clients and visitors.</p>
+            <p class="recom_p3">Our mission is to promote a dynamic community of global citizens who have the wisdom and
+              humanity to actively
+              make the world a better place for everyone.</p>
           </div>
 
-          <div id="recom_btn2">
-            <a href="#"><span>READ MORE ABOUT ME</span></a>
+          <div class="recom_btns">
+            <div id="recom_btn1">
+              <a href="#"><span>GET IN TOUCH</span></a>
+            </div>
+
+            <div id="recom_btn2">
+              <a href="#"><span>READ MORE ABOUT ME</span></a>
+            </div>
           </div>
         </div>
+
 
 
       </div>
       <!-- 內容4_ourGallrey -->
       <div class="ourGallrey">
         <h2>OUR GALLERY</h2>
-        <div class="gal_img"><img src="https://picsum.photos/400/300/?random=1"></div>
-        <div class="gal_img"><img src="https://picsum.photos/400/300/?random=2"></div>
-        <div class="gal_img"><img src="https://picsum.photos/400/600/?random=3"></div>
-        <div class="gal_img"><img src="https://picsum.photos/400/300/?random=4"></div>
-        <div class="gal_img"><img src="https://picsum.photos/400/300/?random=5"></div>
-        <div class="gal_img"><img src="https://picsum.photos/400/300/?random=6"></div>
+        <div class="gal_img"><img src="./images/ourgallery1.jpg"></div>
+        <div class="gal_img"><img src="./images/ourgallery2.jpg"></div>
+        <div class="gal_img"><img src="./images/ourgallery3.jpg"></div>
+        <div class="gal_img"><img src="./images/ourgallery4.jpg"></div>
+        <div class="gal_img"><img src="./images/ourgallery5.jpg"></div>
+        <div class="gal_img"><img src="./images/ourgallery6.jpg"></div>
       </div>
       <!-- 成員欄 -->
       <div class="ourTeam">
@@ -608,14 +604,9 @@
           slidesPerView: 1,
         },
         768: {
+          direction: 'vertical',
           slidesPerView: 1,
           // spaceBetween: 10,
-        },
-        992: {
-          slidesPerView: 1,
-        },
-        1200: {
-          slidesPerView: 1,
         },
       },
 
@@ -627,9 +618,9 @@
         // dynamicBullets: true, // 動態指示器
         // type: 'progressbar', // 分頁指示器類型，progressbar(圖片進度條)、fraction(1/8)
         clickable: true, // 可以點擊換圖
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
-        }
+        // renderBullet: function (index, className) {
+        //   return '<span class="' + className + '">' + (index + 1) + '</span>';
+        // }
       },
       // Navigation arrows (啟用上、下張功能)
       navigation: {
@@ -703,8 +694,8 @@
     // 不需要用到 this 所以可以用 箭頭函式
     document.addEventListener('keydown', (e) => {
       console.log(this)
-      if (e.key === 'ArrowLeft') ww.slidePrev()
-      if (e.key === 'ArrowRight') ww.slideNext();
+      if (e.key === 'ArrowLeft') blogPost_swiper.slidePrev()
+      if (e.key === 'ArrowRight') blogPost_swiper.slideNext();
     })
 
 
@@ -753,8 +744,8 @@
     // 不需要用到 this 所以可以用 箭頭函式
     document.addEventListener('keydown', (e) => {
       console.log(this)
-      if (e.key === 'ArrowLeft') ww.slidePrev()
-      if (e.key === 'ArrowRight') ww.slideNext();
+      if (e.key === 'ArrowLeft') ww_gallery.slidePrev()
+      if (e.key === 'ArrowRight') ww_gallery.slideNext();
     })
 
   </script>

@@ -123,7 +123,7 @@ h2 {
   /* width: 100%; */
   /* height: 100%; */
   /* 固定高度 */
-  height: 855px;
+  height: 885px;
   margin-top: 70px;
   background-color: #ffc107;
   text-align: center;
@@ -144,9 +144,10 @@ h2 {
   object-fit: cover;
 }
 
-#ww .swiper-pagination-bullet {
-  width: 30px;
-  height: 30px;
+.swiper-pagination-bullet {
+  border-radius: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
   line-height: 30px;
   font-size: 1.2rem;
   color: white;
@@ -354,6 +355,15 @@ h2 {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .feature_content .f_contbox {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
 .recommendHostel {
   width: 100%;
   /* height: 660px; */
@@ -375,7 +385,11 @@ h2 {
   position: relative;
   z-index: 1;
 }
-
+.recommendHostel .recom_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .recommendHostel .recom_img::before {
   content: '';
   position: absolute;
@@ -392,7 +406,7 @@ h2 {
   height: 50%;
 }
 
-.recommendHostel h4 {
+.recommendHostel .recom_text .recommendHostel h4 {
   padding-bottom: 12px;
 }
 
@@ -420,6 +434,12 @@ h2 {
   font-size: 0.7rem;
   border-top: 1px solid #999;
   border-bottom: 1px solid #999;
+}
+
+.recommendHostel .recom_btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .recommendHostel input:checked {
@@ -486,6 +506,42 @@ h2 {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .recommendHostel {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 35px;
+  }
+  .recommendHostel .recom_img {
+    width: 55%;
+    /* padding: 5p; */
+    height: 100%;
+    left: 18px;
+  }
+  .recommendHostel .recom_img img {
+    width: 95%;
+    height: 70%;
+  }
+
+  .recommendHostel .recom_img::before {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 85%;
+    border: 3px solid black;
+    top: -20px;
+    left: -3px;
+    z-index: -1;
+  }
+  .recommendHostel .recom_text {
+    display: flex;
+    width: 55%;
+    padding: 0px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* 隱藏選單 */
 .recom_cotent input {
   display: none;
@@ -499,15 +555,15 @@ h2 {
 }
 
 /* 選擇誰要顯示 */
-#recom_tab1:checked~.recom_p1 {
+#recom_tab1:checked ~ .recom_p1 {
   display: block;
 }
 
-#recom_tab2:checked~.recom_p2 {
+#recom_tab2:checked ~ .recom_p2 {
   display: block;
 }
 
-#recom_tab3:checked~.recom_p3 {
+#recom_tab3:checked ~ .recom_p3 {
   display: block;
 }
 
@@ -1041,7 +1097,6 @@ h2 {
     width: 40%;
     height: 100%;
     object-fit: cover;
-
   }
 
   .ourRooms .room .room_header img {
@@ -1636,7 +1691,6 @@ h2 {
     align-items: center;
   }
 
-
   .footer .footer_contact .info ul {
     font-size: 16px;
     display: flex;
@@ -1676,9 +1730,7 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
   }
-
 }
 
 /* --------------------*/
