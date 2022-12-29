@@ -23,7 +23,7 @@
       <div class="row_top">
         <div class="col">
           <!-- 調整hamburger menu大小>fa-lg -->
-          <button><i class="fa-solid fa-bars fa-2xl"></i></button>
+          <button id="btn_hamburger"><i class="fa-solid fa-bars fa-2xl"></i></button>
         </div>
 
         <div class="col">
@@ -50,25 +50,88 @@
           </button>
         </div>
       </div>
+
     </div>
+    <!-- 按下漢堡後出現的側邊攔 -->
+    <div class="top_sidebar">
+      <div id="sidebar" class="sidebar">
+        <ul id="sidebar_icons">
+          <li>
+            <i class="fa-brands fa-facebook-f" style=" color: #000;"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter" style=" color: #000;"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-google-plus-g" style=" color: #000;"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-instagram" style=" color: #000;"></i>
+          </li>
+        </ul>
+        <hr>
+        <ul id="sidebar_menu">
+          <li><a href="#"> HOME</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Rooms</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Pages</a></li>
+
+        </ul>
+
+      </div>
+    </div>
+
     <!-- -------- 主要內容區_content ------ -->
     <div class="content">
       <!-- 內容1_大圖輪播 -->
       <div class="slider_content">
         <!-- 3. 設定 swiper 的結構 Slider main container -->
-        <div id="ww" class="swiper">
+        <div id="pageHeader" class="swiper">
           <!-- 輪播圖主體 -->
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides 播放的圖片 -->
-            <div class="swiper-slide">
-              <img src="https://picsum.photos/1920/1080/?random=1">
+            <div id="swiper-slide1" class="swiper-slide">
+              <img src="./images/pageHeader1.jpg">
+              <div class="pageHeader_text">
+                <h6>WELCOME TO VISIT HOSTEL</h6>
+                <p>
+                  A SPECIAL PLACE WHERE
+                  YOU CAN STAY AND RELAX
+                </p>
+                <div id="pageHeader_btn">
+                  <a href="#"><span>BOOK NOW</span></a>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="https://picsum.photos/1920/1080/?random=2">
+            <div id="swiper-slide2" class="swiper-slide">
+              <img src="./images/pageHeader2.jpg">
+              <div class="pageHeader_text">
+                <h6>SERVING TRAVELERS ON A BUDGET</h6>
+                <p>
+                  WE PROVIDE COMFORTABLE
+                  ACCOMMODATION FOR YOU
+                </p>
+                <div id="pageHeader_btn">
+                  <a href="#"><span>BOOK NOW</span></a>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="https://picsum.photos/1920/1080/?random=3">
+            <div id="swiper-slide3" class="swiper-slide">
+              <img src="./images/pageHeader3.jpg">
+              <div class="pageHeader_text">
+                <h6>A PERFECT AND AFFORDABLE PLACE TO STAY</h6>
+                <p>
+                  TAKE ADVANTAGE OF THE
+                  BUDGET
+                  ORIENTED ACCOMMODATION
+                </p>
+                <div id="pageHeader_btn">
+                  <a href="#"><span>BOOK NOW</span></a>
+                </div>
+              </div>
             </div>
           </div>
           <!-- 分頁 -->
@@ -144,10 +207,8 @@
             </div>
           </div>
         </div>
-
-
-
       </div>
+
       <!-- 內容4_ourGallrey -->
       <div class="ourGallrey">
         <h2>OUR GALLERY</h2>
@@ -589,7 +650,6 @@
   </div>
   <button type="button" id="BackTop" class="toTop-arrow">123</button>
   <script src="./JQ/jquery-2.1.4.min.js"></script>
-
   <!-- 2. 設定 swiper 的 js (套件內容要記得寫在主程式下面!!)-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
@@ -606,8 +666,14 @@
       }).scroll();
     });
 
+    $('#btn_hamburger').on('click', function () {
+      console.log('booooom')
+      if ()
+        $('.top_sidebar').addClass("displayShow").fadeIn
+    })
+
     // 第一個輪播 ----------------------------
-    const ww = new Swiper('#ww', {
+    const pageHeader = new Swiper('#pageHeader', {
       mousewheel: true,
       // Optional parameters
       direction: 'horizontal',// vertical 輪播圖呈現水平或垂直，'vertical'或是'horizontal'
@@ -658,8 +724,8 @@
     // 不需要用到 this 所以可以用 箭頭函式
     document.addEventListener('keydown', (e) => {
       console.log(this)
-      if (e.key === 'ArrowLeft') ww.slidePrev()
-      if (e.key === 'ArrowRight') ww.slideNext();
+      if (e.key === 'ArrowLeft') pageHeader.slidePrev()
+      if (e.key === 'ArrowRight') pageHeader.slideNext();
     })
 
 
