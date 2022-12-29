@@ -87,7 +87,8 @@ h2 {
   /* box-shadow: ; */
 }
 
-.top .row_top #top_col3 {}
+.top .row_top #top_col3 {
+}
 
 .row_top button {
   border: none;
@@ -121,7 +122,6 @@ h2 {
     display: none;
   }
 }
-
 
 .content {
   width: 100%;
@@ -480,15 +480,15 @@ h2 {
 }
 
 /* 選擇誰要顯示 */
-#recom_tab1:checked~.recom_p1 {
+#recom_tab1:checked ~ .recom_p1 {
   display: block;
 }
 
-#recom_tab2:checked~.recom_p2 {
+#recom_tab2:checked ~ .recom_p2 {
   display: block;
 }
 
-#recom_tab3:checked~.recom_p3 {
+#recom_tab3:checked ~ .recom_p3 {
   display: block;
 }
 
@@ -709,7 +709,6 @@ h2 {
   }
 }
 
-
 .ourGallrey {
   width: 100%;
   padding: 30px 30px 10px;
@@ -811,7 +810,8 @@ h2 {
     display: inline-block;
   }
 
-  .ourGallrey .ourgal_img_group .gal_img:hover {}
+  .ourGallrey .ourgal_img_group .gal_img:hover {
+  }
 
   .ourGallrey .ourgal_img_group #ourgallery1 {
     position: absolute;
@@ -853,6 +853,54 @@ h2 {
 
   .ourGallrey .ourgal_img_group .gal_img img {
     max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ourGallrey .ourgal_img_group {
+    width: 87%;
+    height: 695px;
+    margin: 35px 0;
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+  .ourGallrey .ourgal_img_group .gal_img {
+    width: 24%;
+    margin: 5px;
+    display: inline-block;
+  }
+  .ourGallrey .ourgal_img_group #ourgallery1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .ourGallrey .ourgal_img_group #ourgallery2 {
+    position: absolute;
+    top: 0px;
+    left: 450px;
+  }
+  .ourGallrey .ourgal_img_group #ourgallery3 {
+    position: absolute;
+    top: 0;
+    left: 899px;
+  }
+  .ourGallrey .ourgal_img_group #ourgallery4 {
+    width: 49.3%;
+    display: inline-block;
+    position: absolute;
+    top: 360px;
+    left: 0;
+  }
+  .ourGallrey .ourgal_img_group #ourgallery5 {
+    position: absolute;
+    top: 0px;
+    left: 1350px;
+  }
+  .ourGallrey .ourgal_img_group #ourgallery6 {
+    position: absolute;
+    top: 360px;
+    left: 1350px;
   }
 }
 
@@ -1064,7 +1112,12 @@ h2 {
   .offer .offer_box {
     width: 25%;
   }
+}
 
+@media screen and (min-width: 1200px) {
+  .offer .offer_box_group {
+    padding: 15px 140px;
+  }
 }
 
 .saveCash {
@@ -1133,6 +1186,11 @@ h2 {
 
 .saveCash #btn:hover {
   border: none;
+}
+@media screen and (min-width: 1200px) {
+  .saveCash {
+    height: 600px;
+  }
 }
 
 .ourRooms {
@@ -1366,6 +1424,71 @@ h2 {
     font-weight: bold;
   }
 }
+@media screen and (min-width: 1200px) {
+  .ourRooms {
+    width: 100%;
+    height: 1000px;
+    padding: 50px 50px;
+    /* margin-bottom: 20px; */
+  }
+  .ourRooms h2 {
+    /* margin-top: 2rem; */
+    margin-bottom: 20px;
+  }
+  .ourRooms .room {
+    width: 60%;
+    height: 385px;
+    margin: 0 0 40px 0;
+  }
+  .ourRooms .room::before {
+    content: '$30';
+    display: flex;
+    flex-direction: column;
+    font-size: 33px;
+    margin: 10px;
+    position: absolute;
+    width: 90px;
+    height: 91px;
+    background: rgb(249, 206, 15);
+    top: -10px;
+    right: -10px;
+    border-radius: 0 0 0 40px;
+  }
+  .ourRooms .room::after {
+    content: '/NIGHT';
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin: 10px;
+    position: absolute;
+    color: rgb(156, 154, 154);
+    /* background: rgb(249, 206, 15); */
+    top: 48px;
+    right: 7px;
+    border-radius: 0 0 0 15px;
+  }
+  .ourRooms .room .room_text h4 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .ourRooms .room .room_text p {
+    margin: 5px 0;
+    font-size: 21px;
+    color: #999;
+  }
+  .ourRooms #btn {
+    margin-top: 5px;
+    padding: 17px;
+    width: 150px;
+    height: 65px;
+  }
+
+  .ourRooms #btn span {
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+  }
+}
 
 .feedback {
   width: 100%;
@@ -1466,6 +1589,36 @@ h2 {
     width: 30%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .feedback {
+    width: 100%;
+    height: 650px;
+    padding-top: 30px;
+    background: #eee;
+  }
+  .feedback .customer_group {
+    /* margin-right: 0; */
+    padding: 0 36px;
+    width: 100%;
+    height: 415px;
+  }
+  .feedback .customer .quote-creative-figure {
+    width: 120px;
+    height: 128px;
+  }
+  .feedback .customer .quote-creative-figure img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feedback .customer .quote-creative .quote-creative-text {
+    font-size: 20px;
+  }
+  .feedback .customer .quote-creative {
+    width: 80%;
+    height: 330px;
+  }
+}
 
 .followingTheDream {
   width: 100%;
@@ -1536,7 +1689,21 @@ h2 {
   .followingTheDream .dream_card::before {
     display: none;
   }
-
+}
+@media screen and (min-width: 1200px) {
+  .followingTheDream .dream_card {
+    width: 400px;
+    height: 390px;
+    border: 24px solid #eee;
+    margin: 20px 30px;
+  }
+  .followingTheDream .dream_card span {
+    font-size: 100px;
+  }
+  .followingTheDream .dream_card p {
+    margin-top: 15px;
+    font-size: 29px;
+  }
 }
 
 .discount {
@@ -1666,7 +1833,30 @@ h2 {
     top: 3.5px;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  .discount {
+    height: 610px;
+    padding: 60px 570px;
+  }
+  .discount h2 {
+    font-size: 45px;
+    margin: 10px;
+  }
+  .discount p {
+    font-size: 20px;
+    margin: 20px;
+  }
+  .discount .discount_input_n_btn .discount_input {
+    margin: 0;
+    width: 325px;
+  }
+  .discount .discount_input_n_btn #btn {
+    height: 58px;
+    width: 137px;
+    font-size: 15px;
+    top: 4.5px;
+  }
+}
 .blogPost {
   width: 100%;
   padding-top: 50px;
@@ -1761,6 +1951,13 @@ h2 {
 @media screen and (min-width: 992px) {
   .blogPost {
     padding: 30px 240px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .blogPost {
+    padding: 30px 450px;
+    height: 720px;
   }
 }
 
@@ -2054,20 +2251,35 @@ h2 {
 }
 
 @media screen and (min-width: 992px) {
-  .footer .footer_contact {}
-
+  .footer .footer_contact {
+    width: 100%;
+    /* background: #252728; */
+    color: #6c757d;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
   .footer .footer_contact .contactBox {
     display: flex;
     flex-direction: column;
+    margin: 10px;
+    align-items: flex-start;
   }
 
   .footer .footer_contact .contactBox .info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .footer .footer_contact .contactBox .info ul {
     width: 54%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
