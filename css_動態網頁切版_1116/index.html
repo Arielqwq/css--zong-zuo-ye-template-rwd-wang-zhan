@@ -53,7 +53,7 @@
 
     </div>
     <!-- 按下漢堡後出現的側邊攔 -->
-    <div class="top_sidebar">
+    <div class="top_sidebar displayOff">
       <div id="sidebar" class="sidebar">
         <ul id="sidebar_icons">
           <li>
@@ -544,7 +544,7 @@
 
       <!-- GALLERY -->
       <div class="gallery">
-        <p>GALLERY</p>
+        <h2>GALLERY</h2>
         <!-- 3. 設定 swiper 的結構 Slider main container -->
         <div id="ww_gallery" class="swiper">
           <!-- 輪播圖主體 -->
@@ -667,9 +667,13 @@
     });
 
     $('#btn_hamburger').on('click', function () {
-      console.log('booooom')
-      if ()
-        $('.top_sidebar').addClass("displayShow").fadeIn
+      console.log($('.top_sidebar').classList)
+      // if ($('.top_sidebar').classList.json(includes("displayoff"))) {
+      if ($('.top_sidebar').hasClass('displayOff')) {
+        $('.top_sidebar').removeClass('displayOff').show()
+      } else {
+        $('.top_sidebar').addClass('displayOff').hide()
+      }
     })
 
     // 第一個輪播 ----------------------------
@@ -695,9 +699,6 @@
           // spaceBetween: 10,
         },
       },
-
-      // effect: "cube",
-
       // 分頁指示器 
       pagination: {
         el: '.swiper-pagination',
@@ -812,19 +813,20 @@
         1200: {
           slidesPerView: 6,
         },
-        // 分頁指示器 
-        pagination: {
-          el: '.swiper-pagination',
-          dynamicBullets: true, // 動態指示器
-          type: 'progressbar', // 分頁指示器類型，progressbar(圖片進度條)、fraction(1/8)
-          clickable: true, // 可以點擊換圖
-        },
+
         // // Navigation arrows (啟用上、下張功能)
         // navigation: {
         //   nextEl: '.swiper-button-next',
         //   prevEl: '.swiper-button-prev',
         // },
-      }
+      },
+      // 分頁指示器 
+      pagination: {
+        el: '.swiper-pagination',
+        // dynamicBullets: true, // 動態指示器
+        // type: 'progressbar', // 分頁指示器類型，progressbar(圖片進度條)、fraction(1/8)
+        clickable: true, // 可以點擊換圖
+      },
     });
 
     // 不需要用到 this 所以可以用 箭頭函式
