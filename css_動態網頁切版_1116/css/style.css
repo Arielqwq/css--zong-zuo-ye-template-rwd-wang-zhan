@@ -2254,6 +2254,7 @@ h2 {
   }
   .blogPost_swiper {
     height: 800px;
+    padding: 10px;
   }
   .blogPost .blogHeader {
     width: 100%;
@@ -2887,14 +2888,14 @@ h2 {
     content: '';
     position: absolute;
     transform: rotate(-45deg) translate(0, -50%);
-    left: 0.9rem;
+    left: 1.1rem;
   }
 
   .toTop-arrow::after {
     content: '';
     position: absolute;
     transform: rotate(45deg) translate(0, -50%);
-    right: 0.9rem;
+    right: 1.1rem;
   }
 
   .toTop-arrow:focus {
