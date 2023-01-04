@@ -579,7 +579,31 @@ h2 {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
+    padding: 50px;
     justify-content: space-evenly;
+  }
+  .feature_content .f_contbox .box1,
+  .feature_content .f_contbox .box2,
+  .feature_content .f_contbox .box3 {
+    width: 28%;
+    height: 560px;
+  }
+  .feature_content p {
+    list-style: none;
+    font-size: 25px;
+  }
+  .feature_content a {
+    /* list-style: none; */
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .feature_content a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 130px;
+    top: 51px;
   }
 }
 
@@ -673,6 +697,14 @@ h2 {
 .recommendHostel .mytab label:hover {
   color: orange;
 }
+
+/* @media screen and (min-width: 992px) {
+  .recommendHostel {
+    display: flex;
+    flex-direction: row;
+    padding: 70px 270px;
+  }
+} */
 
 /* 隱藏選單 */
 .recom_cotent input {
@@ -879,7 +911,7 @@ h2 {
   .recommendHostel {
     display: flex;
     flex-direction: row;
-    padding: 30px 35px;
+    padding: 70px 270px;
   }
 
   /* .recommendHostel h2 {
@@ -1575,8 +1607,8 @@ h2 {
 
   .ourRooms .room::after {
     margin: 0;
-    top: 27px;
-    right: 2px;
+    top: 38px;
+    right: 6px;
   }
 
   .ourRooms h2 {
@@ -2217,14 +2249,24 @@ h2 {
 
 @media screen and (min-width: 992px) {
   .blogPost {
-    padding: 30px 240px;
+    padding: 30px 500px;
+    height: 830px;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .blogPost {
-    padding: 30px 450px;
-    height: 720px;
+  .blogPost_swiper {
+    height: 800px;
+  }
+  .blogPost .blogHeader {
+    width: 100%;
+    height: 520px;
+  }
+  .blogPost .blogHeader img {
+    height: 520px;
+    width: 100%;
+  }
+  .blogPost .blogText {
+    width: 485px;
+    height: 155px;
+    padding: 5px;
   }
 }
 
@@ -2577,12 +2619,12 @@ h2 {
     width: 100%;
     /* background: #252728; */
     color: #6c757d;
-    padding: 30px;
+    padding: 50px 210px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .footer .footer_contact .contactBox {
@@ -2701,6 +2743,21 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer .social_media {
+    width: 100%;
+    height: 90px;
+    background: #252728;
+    color: #6c757d;
+    display: flex;
+    padding: 20px 80px;
+    font-size: 18px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
