@@ -451,7 +451,7 @@
               <div class="blogText">
                 <a href="#">HOW TO SAVE A LOT WHEN TRAVELING WORLDWIDE</a>
                 <h5> MAY 17, 2022</h5>
-                <ul>
+                <ul id="blogPost_ul" class="displayOff">
                   <li>
                     <i class="fa-brands fa-facebook-f" style=" color: #fff;"></i>
                   </li>
@@ -472,9 +472,9 @@
                 <img src="./images/blogPost2.jpg">
               </div>
               <div class="blogText">
-                <a href="#">HOW TO SAVE A LOT WHEN TRAVELING WORLDWIDE</a>
+                <a href="#">BEST DAYS TO STAY IN LOS ANGELES</a>
                 <h5>MAY 17, 2022</h5>
-                <ul>
+                <ul id="blogPost_ul" class="displayOff">
                   <li>
                     <i class="fa-brands fa-facebook-f" style=" color: #fff;"></i>
                   </li>
@@ -496,8 +496,8 @@
               </div>
               <div class="blogText">
                 <a href="#">HOW TO SAVE A LOT WHEN TRAVELING WORLDWIDE</a>
-                <h5>MAY 17, 2022</h5>
-                <ul>
+                <h5> MAY 17, 2022</h5>
+                <ul id="blogPost_ul" class="displayOff">
                   <li>
                     <i class="fa-brands fa-facebook-f" style=" color: #fff;"></i>
                   </li>
@@ -518,9 +518,9 @@
                 <img src="./images/blogPost2.jpg">
               </div>
               <div class="blogText">
-                <a href="#"></a>HOW TO SAVE A LOT WHEN TRAVELING WORLDWIDE</a>
+                <a href="#">BEST DAYS TO STAY IN LOS ANGELES</a>
                 <h5>MAY 17, 2022</h5>
-                <ul>
+                <ul id="blogPost_ul" class="displayOff">
                   <li>
                     <i class="fa-brands fa-facebook-f" style=" color: #fff;"></i>
                   </li>
@@ -667,7 +667,7 @@
     });
 
     $('#btn_hamburger').on('click', function () {
-      console.log($('.top_sidebar').classList)
+      // console.log($('.top_sidebar').classList)
       // if ($('.top_sidebar').classList.json(includes("displayoff"))) {
       if ($('.top_sidebar').hasClass('displayOff')) {
         $('.top_sidebar').removeClass('displayOff').show()
@@ -675,6 +675,46 @@
         $('.top_sidebar').addClass('displayOff').hide()
       }
     })
+
+    // blogPost_ul
+    // $('.blogText').on('mouseover', function () {
+    //   console.log('aaa')
+    //   if ($('#blogPost_ul').hasClass('displayOff')) {
+    //     $('#blogPost_ul').removeClass('displayOff').show()
+    //   } else {
+    //     $('#blogPost_ul').addClass('displayOff').hide()
+    //   }
+    // })
+
+    // const blogPost_uls = document.querySelectorAll('#blogPost_ul');
+    // blogPost_uls.forEach(function (blogPost_ul) {
+    //   blogPost_ul.addEventListener('mouseover', function () {
+    //     if ($('#blogPost_ul').hasClass('displayOff'))
+    //       $('#blogPost_ul').removeClass('displayOff')
+    //   })
+    // })
+    // $(".blogText").hover(function () {
+    //   console.log('aaa')
+    //   $('#blogPost_ul').removeClass('displayOff')
+    // })
+
+
+    // $(".blogText").on({
+    //   mouseenter: function () {
+    //     $('#blogPost_ul').removeClass('displayOff')
+    //   },
+    //   mouseleave: function () {
+    //     $('#blogPost_ul').addClass('displayOff')
+    //   }
+    // })
+
+    $('.blogText').on('mouseover', function () {
+      $('#blogPost_ul').removeClass('displayOff')
+    });
+    $('.blogText').on('mouseleave', function () {
+      $('#blogPost_ul').addClass('displayOff')
+    });
+
 
     // 第一個輪播 ----------------------------
     const pageHeader = new Swiper('#pageHeader', {
