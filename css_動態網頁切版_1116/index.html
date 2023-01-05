@@ -17,6 +17,7 @@
 <body>
 
   <div class="container">
+
     <!-- -------- 固定資訊列_top -------- -->
     <div class="top">
       <!-- 資訊列 -->
@@ -52,6 +53,7 @@
       </div>
 
     </div>
+
     <!-- 按下漢堡後出現的側邊攔 -->
     <div class="top_sidebar displayOff">
       <div id="sidebar" class="sidebar">
@@ -85,7 +87,7 @@
 
     <!-- -------- 主要內容區_content ------ -->
     <div class="content">
-      <!-- 內容1_大圖輪播 -->
+      <!-- 大圖輪播 -->
       <div class="slider_content">
         <!-- 3. 設定 swiper 的結構 Slider main container -->
         <div id="pageHeader" class="swiper">
@@ -138,7 +140,8 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-      <!-- 內容2_主要特色_三格方塊 -->
+
+      <!-- 主要特色_三格方塊 -->
       <div class="feature_content">
         <div class="f_contbox">
           <div class="box1">
@@ -169,7 +172,8 @@
         </div>
 
       </div>
-      <!-- 內容3_ 最推薦商品-->
+
+      <!-- 最推薦商品-->
       <div class="recommendHostel">
         <div class="recom_img">
           <img src="./images/besthotel.jpg">
@@ -209,7 +213,7 @@
         </div>
       </div>
 
-      <!-- 內容4_ourGallrey -->
+      <!-- ourGallrey -->
       <div class="ourGallrey">
         <h2>OUR GALLERY</h2>
         <div class="ourgal_img_group">
@@ -221,6 +225,7 @@
           <div id="ourgallery6" class="gal_img"><img src="./images/ourgallery6.jpg"></div>
         </div>
       </div>
+
       <!-- 成員欄 -->
       <div class="ourTeam">
         <h2>OUR TEAM</h2>
@@ -260,6 +265,7 @@
         </div>
 
       </div>
+
       <!-- WHAT WE OFFER -->
       <div class="offer">
         <h2>WHAT WE OFFER</h2>
@@ -307,6 +313,7 @@
         </div>
 
       </div>
+
       <!-- SAVE CASH FOR FUN-->
       <div class="saveCash">
         <h2>SAVE CASH FOR FUN</h2>
@@ -316,6 +323,7 @@
           <span><a href="#"> LEARN MORE</a></span>
         </div>
       </div>
+
       <!-- OUR ROOMS -->
       <div class="ourRooms">
         <h2>OUR ROOMS</h2>
@@ -366,6 +374,7 @@
           </div>
         </div>
       </div>
+
       <!-- customer feedback -->
       <div class="feedback">
         <h2>WHAT PEOPLE SAY</h2>
@@ -401,6 +410,7 @@
           </div>
         </div>
       </div>
+
       <!-- MORE THAN 10 YEARS OF FOLLOWING THE DREAM -->
       <div class="followingTheDream">
         <h2>MORE THAN 10 YEARS OF FOLLOWING THE DREAM</h2>
@@ -420,6 +430,7 @@
         </div>
 
       </div>
+
       <!-- DISCOUNT -->
       <div class="discount">
         <h2>SIGN UP FOR 25% DISCOUNT</h2>
@@ -445,9 +456,12 @@
           <div class="swiper-wrapper">
             <!-- Slides 播放的圖片 -->
             <div class="swiper-slide">
-              <div class="blogHeader">
-                <img src="./images/blogPost1.jpg">
+              <div class="blogHeader_box">
+                <div class="blogHeader">
+                  <img src="./images/blogPost1.jpg">
+                </div>
               </div>
+
               <div class="blogText">
                 <a href="#">HOW TO SAVE A LOT WHEN TRAVELING WORLDWIDE</a>
                 <h5> MAY 17, 2022</h5>
@@ -468,9 +482,12 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="blogHeader">
-                <img src="./images/blogPost2.jpg">
+              <div class="blogHeader_box">
+                <div class="blogHeader">
+                  <img src="./images/blogPost2.jpg">
+                </div>
               </div>
+
               <div class="blogText">
                 <a href="#">BEST DAYS TO STAY IN LOS ANGELES</a>
                 <h5>MAY 17, 2022</h5>
@@ -491,9 +508,12 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="blogHeader">
-                <img src="./images/blogPost1.jpg">
+              <div class="blogHeader_box">
+                <div class="blogHeader">
+                  <img src="./images/blogPost1.jpg">
+                </div>
               </div>
+
               <div class="blogText">
                 <a href="#">HOW TO SAVE A LOT WHEN TRAVELING WORLDWIDE</a>
                 <h5> MAY 17, 2022</h5>
@@ -514,9 +534,12 @@
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="blogHeader">
-                <img src="./images/blogPost2.jpg">
+              <div class="blogHeader_box">
+                <div class="blogHeader">
+                  <img src="./images/blogPost2.jpg">
+                </div>
               </div>
+
               <div class="blogText">
                 <a href="#">BEST DAYS TO STAY IN LOS ANGELES</a>
                 <h5>MAY 17, 2022</h5>
@@ -644,11 +667,13 @@
           <p><a href="#">Privacy Policy</a></p>
         </div>
       </div>
+
       <!-- content -->
     </div>
+
     <!-- CONTAINER -->
   </div>
-  <button type="button" id="BackTop" class="toTop-arrow">123</button>
+
   <script src="./JQ/jquery-2.1.4.min.js"></script>
   <!-- 2. 設定 swiper 的 js (套件內容要記得寫在主程式下面!!)-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -665,7 +690,7 @@
         }
       }).scroll();
     });
-
+    // 顯示漢堡選單內容
     $('#btn_hamburger').on('click', function () {
       // console.log($('.top_sidebar').classList)
       // if ($('.top_sidebar').classList.json(includes("displayoff"))) {
@@ -676,69 +701,21 @@
       }
     })
 
-    // blogPost_ul
-    // $('.blogText').on('mouseover', function () {
-    //   console.log('aaa')
-    //   if ($('#blogPost_ul').hasClass('displayOff')) {
-    //     $('#blogPost_ul').removeClass('displayOff').show()
-    //   } else {
-    //     $('#blogPost_ul').addClass('displayOff').hide()
-    //   }
-    // })
+    // hover 時出現 icons
     $('.blogText').each(function (i) {
       $(this).on('mouseover', function (i) {
         $(this).children('.blogPost_ul').removeClass('displayOff')
-        // console.log(this)
       })
     })
-    // })
 
     $('.blogText').each(function () {
-      // $('.blogPost_ul').each(function (i) {
       $(this).on('mouseleave', function (i) {
         $(this).children('.blogPost_ul').addClass('displayOff')
-        // console.log(this)
       })
     })
 
-    // $('.blogPost_ul').each(function (i) {
-    //   $('.blogText').on('mouseleave', function () {
-    //     $('.blogPost_ul').addClass('displayOff')
-    //     console.log(this)
-    //   })
-    // })
 
-    // const blogPost_uls = document.querySelectorAll('#blogPost_ul');
-    // blogPost_uls.forEach(function (blogPost_ul) {
-    //   blogPost_ul.addEventListener('mouseover', function () {
-    //     if ($('#blogPost_ul').hasClass('displayOff'))
-    //       $('#blogPost_ul').removeClass('displayOff')
-    //   })
-    // })
-    // $(".blogText").hover(function () {
-    //   console.log('aaa')
-    //   $('#blogPost_ul').removeClass('displayOff')
-    // })
-
-
-    // $(".blogText").on({
-    //   mouseenter: function () {
-    //     $('#blogPost_ul').removeClass('displayOff')
-    //   },
-    //   mouseleave: function () {
-    //     $('#blogPost_ul').addClass('displayOff')
-    //   }
-    // })
-
-    // $('.blogText').on('mouseover', function () {
-    //   $('#blogPost_ul').removeClass('displayOff')
-    // });
-    // $('.blogText').on('mouseleave', function () {
-    //   $('#blogPost_ul').addClass('displayOff')
-    // });
-
-
-    // 第一個輪播 ----------------------------
+    // 大圖的輪播 ----------------------------
     const pageHeader = new Swiper('#pageHeader', {
       mousewheel: true,
       // Optional parameters
@@ -897,6 +874,7 @@
       if (e.key === 'ArrowLeft') ww_gallery.slidePrev()
       if (e.key === 'ArrowRight') ww_gallery.slideNext();
     })
+
 
   </script>
 
